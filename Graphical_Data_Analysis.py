@@ -93,12 +93,12 @@ def generate_cdf_plot( dataFrame, outFileName ):
 # accept the dataframe and generate a scatter plot of earthquake magnitude vs depth
 def generate_scatter_plot( dataFrame, outFileName ):
     
-    plt.scatter(dataFrame['mag'].dropna(),dataFrame['depth'].dropna(), color = 'g', marker = '*')
+    plt.scatter(dataFrame['mag'].dropna(),dataFrame['depth'].dropna(), color = 'g', marker = '.')
 
 # Label Axes
-    plt.xlabel('Magnitude',fontsize=10)
-    plt.ylabel('Depth',fontsize=10)
-    plt.title('Earthquake Magnitude vs. Depth', fontsize=15)
+    plt.xlabel('Magnitude')
+    plt.ylabel('Depth')
+    plt.title('Earthquake Magnitude vs. Depth')
     
      #save the file in .tif 
     plt.savefig('scatter.tif')
@@ -140,34 +140,29 @@ if __name__ == '__main__':
      print('The histogram of Earthquake magnitude \n')
      outHistName = 'histogram.tif'
      generate_histogram_plot( dataFrame, outHistName )
-     #print(outHistName)
-     
+ 
 # generate kde figure
      print('The KDE of Earthquake magnitude \n')
      outHistName = 'kde.tif'
      generate_kde_plot( dataFrame, outHistName )
-     #print(outHistName)
      
 # generate lat-long figure
      print('The Longitude and Latitudes of Earthquake magnitude \n')
      outHistName = 'lat-long.tif'
      generate_lat_long_plot( dataFrame, outHistName )
-     #print(outHistName)
 
 # generate cdf figure
      print('The normalized CDF of Earthquake depths \n')
      outHistName = "cdf.tif"
      generate_cdf_plot( dataFrame, outHistName )
-     #print(outHistName)
-    
+     
 # generate scatter plot figure
      print('The Scatter plot of Earthquake magnitude and depths \n')
      outHistName = "scatter.tif"
      generate_scatter_plot( dataFrame, outHistName )
-     #print(outHistName)
      
 # generate quantile figure
      print('The Quantile plot of Earthquake magnitude \n')
      outHistName = "quantile.tif"
      generate_quantile_plot( dataFrame, outHistName )
-     #print(outHistName)
+  
