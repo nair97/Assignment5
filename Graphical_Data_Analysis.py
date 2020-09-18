@@ -93,7 +93,7 @@ def generate_cdf_plot( dataFrame, outFileName ):
 # accept the dataframe and generate a scatter plot of earthquake magnitude vs depth
 def generate_scatter_plot( dataFrame, outFileName ):
     
-    plt.scatter(dataFrame['mag'].dropna(),dataFrame['depth'].dropna(), color = 'g', marker = '.')
+    plt.scatter(dataFrame['mag'],dataFrame['depth'], color = 'g', marker = '.')
 
 # Label Axes
     plt.xlabel('Magnitude')
